@@ -15,7 +15,46 @@
         },
         "problemMatcher": [],
         "detail": "Compiles SASS to CSS"
-      }
+      },
+      {
+        "label": "Create Git Stash",
+        "type": "shell",
+        "command": "git stash",
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        }
+      },
+      {
+        "label": "Pop Git Stash",
+        "type": "shell",
+        "command": "git stash pop",
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        }
+      },
+      {
+        "label": "Checkout Develop Branch",
+        "type": "shell",
+        "command": "git checkout develop",
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        }
+      },
+      {
+        "label": "Stash + Checkout + Pop",
+        "dependsOn": [
+          "Create Git Stash",
+          "Checkout Develop Branch",
+          "Pop Git Stash"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        }
+      }                  
     ]
   }
   

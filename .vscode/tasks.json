@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Compile SASS to CSS",
+        "type": "shell",
+        "command": "sass",
+        "args": [
+          "$file",  // Il nome del tuo file .scss
+          "styles.css"    // Il nome del file .css di destinazione
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [],
+        "detail": "Compiles SASS to CSS"
+      }
+    ]
+  }
+  
